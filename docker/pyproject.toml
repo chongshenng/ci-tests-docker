@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "CI-tests-for-Docker"
+version = "0.1.0"
+description = "CI tests for Docker and Docker Compose"
+authors = [
+    { name = "Chong Shen Ng"},
+]
+dependencies = [
+    "pytest",
+    "testcontainers",
+]
+requires-python = ">=3.10"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.hatch.metadata]
+allow-direct-references = true
